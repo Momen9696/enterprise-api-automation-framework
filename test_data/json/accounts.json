@@ -1,0 +1,16 @@
+[
+  {
+    "full_name": "Account Holder",
+    "account_type": "savings",
+    "currency": "USD",
+    "expected_status": 201,
+    "expected_code": ""
+  },
+  {
+    "full_name": "Second Holder",
+    "account_type": "checking",
+    "currency": "EUR",
+    "expected_status": 422,
+    "expected_code": "validation_error"
+  }
+]

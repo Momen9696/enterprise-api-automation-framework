@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "account_id",
+    "destination_account_id",
+    "type",
+    "amount",
+    "created_by",
+    "idempotent_replay"
+  ],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "account_id": {"type": "string", "minLength": 1},
+    "destination_account_id": {"type": ["string", "null"]},
+    "type": {"type": "string", "enum": ["deposit", "withdraw", "transfer"]},
+    "amount": {"type": "string", "pattern": "^\\d+\\.\\d{2}$"},
+    "created_by": {"type": "string", "minLength": 1},
+    "idempotent_replay": {"type": "boolean"}
+  }
+}

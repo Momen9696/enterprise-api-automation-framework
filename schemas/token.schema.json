@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["access_token", "token_type", "expires_in"],
+  "properties": {
+    "access_token": {"type": "string", "minLength": 20},
+    "token_type": {"type": "string", "const": "Bearer"},
+    "expires_in": {"type": "integer", "minimum": 1}
+  }
+}

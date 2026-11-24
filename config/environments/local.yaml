@@ -1,0 +1,14 @@
+name: local
+base_url: http://127.0.0.1:8000
+timeout_seconds: 10
+retry:
+  max_attempts: 3
+  backoff_seconds: 0.2
+  retry_statuses: [429, 503]
+users:
+  admin:
+    email: admin@demo.local
+    password: AdminPass123!
+  customer:
+    email: customer@demo.local
+    password: CustomerPass123!

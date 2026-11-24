@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "owner_id", "currency", "account_type", "balance", "status"],
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "owner_id": {"type": "string", "minLength": 1},
+    "currency": {"type": "string", "enum": ["USD"]},
+    "account_type": {"type": "string", "enum": ["checking", "savings"]},
+    "balance": {"type": "string", "pattern": "^-?\\d+\\.\\d{2}$"},
+    "status": {"type": "string", "enum": ["open"]}
+  }
+}

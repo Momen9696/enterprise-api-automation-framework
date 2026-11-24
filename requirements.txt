@@ -1,0 +1,15 @@
+robotframework==7.5.1
+robotframework-requests==0.9.7
+robotframework-pabot==4.3.2
+robotframework-jsonlibrary==0.5
+requests==2.34.2
+jsonschema==4.26.0
+openpyxl==3.1.5
+PyYAML==6.0.4
+fastapi==0.165.0
+uvicorn==0.54.0
+PyJWT==2.15.1
+pytest==9.0.3
+allure-pytest==2.16.2
+allure-robotframework==2.16.2
+pip-audit==2.10.1

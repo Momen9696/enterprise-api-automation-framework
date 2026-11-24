@@ -1,0 +1,26 @@
+[
+  {
+    "type": "deposit",
+    "amount": "15.50",
+    "expected_status": 201,
+    "expected_code": ""
+  },
+  {
+    "type": "withdraw",
+    "amount": "20.00",
+    "expected_status": 201,
+    "expected_code": ""
+  },
+  {
+    "type": "withdraw",
+    "amount": "0.00",
+    "expected_status": 422,
+    "expected_code": "invalid_amount"
+  },
+  {
+    "type": "withdraw",
+    "amount": "-5.00",
+    "expected_status": 422,
+    "expected_code": "invalid_amount"
+  }
+]

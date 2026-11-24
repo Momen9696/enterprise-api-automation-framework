@@ -1,0 +1,37 @@
+[
+  {
+    "full_name": "Ada Lovelace",
+    "password_mode": "valid",
+    "role": "customer",
+    "expected_status": 201,
+    "expected_code": ""
+  },
+  {
+    "full_name": "",
+    "password_mode": "valid",
+    "role": "customer",
+    "expected_status": 422,
+    "expected_code": "validation_error"
+  },
+  {
+    "full_name": "Short Password",
+    "password_mode": "short",
+    "role": "customer",
+    "expected_status": 422,
+    "expected_code": "validation_error"
+  },
+  {
+    "full_name": "Missing Password",
+    "password_mode": "empty",
+    "role": "customer",
+    "expected_status": 422,
+    "expected_code": "validation_error"
+  },
+  {
+    "full_name": "Bad Role",
+    "password_mode": "valid",
+    "role": "superuser",
+    "expected_status": 422,
+    "expected_code": "validation_error"
+  }
+]
