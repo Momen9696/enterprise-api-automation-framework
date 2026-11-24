@@ -1,0 +1,13 @@
+flowchart TD
+    suites["Robot suites<br/>tests/robot"] --> resources["Resource files<br/>resources"]
+    resources --> keywords["Keyword libraries<br/>framework/robot_libs"]
+    pytest["Pytest<br/>unit and integration"] --> core
+    keywords --> core["Framework core<br/>config, auth, HTTP, retry, schema, data, masking"]
+    core --> requestsLib["RequestsLibrary session"]
+    requestsLib --> api["FastAPI demo ledger<br/>demo_api"]
+    data["Excel, JSON, schemas"] --> keywords
+    data --> core
+    ci["GitHub Actions"] --> pytest
+    ci --> suites
+    core --> reports["Robot HTML, JUnit XML, Allure results"]
+    pytest --> reports
